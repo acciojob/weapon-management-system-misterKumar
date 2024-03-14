@@ -27,6 +27,12 @@ public class WeaponDemo {
 
         public void setDamage(int damage) {
         	//your code goes here
+            if(damage>=1 && damage<=100){
+                this.damage=damage;
+            }
+            else {
+                throw new IllegalArgumentException("Damage must be between 1 and 100.");
+            }
         }
 
         public int getRange() {
@@ -36,6 +42,11 @@ public class WeaponDemo {
 
         public void setRange(int range) {
         	//your code goes here
+            if (range >= 1 && range <= 500) {
+                this.range = range;
+            } else {
+                throw new IllegalArgumentException("Range must be between 1 and 500.");
+            }
         }
     }
 
